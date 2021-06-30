@@ -1,3 +1,6 @@
+// AUTHOR: Matthew Braniff
+// 06/30/2021
+
 #ifndef LED_H
 #define LED_H
 
@@ -10,6 +13,7 @@ typedef struct led_t{
     bool state;
 }led_t;
 
+void led_init(led_t* led);
 void led_write(led_t* led, bool state);
 bool led_read(led_t* led);
 

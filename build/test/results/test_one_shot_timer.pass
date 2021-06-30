@@ -1,0 +1,30 @@
+---
+:source:
+  :path: test
+  :file: test_one_shot_timer.c
+:successes:
+- :test: test_timer_is_initiated
+  :line: 41
+  :message: ''
+  :unity_test_time: 0
+- :test: test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled
+  :line: 47
+  :message: ''
+  :unity_test_time: 0
+- :test: test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled
+  :line: 57
+  :message: ''
+  :unity_test_time: 0
+- :test: test_whenTimePassesStopTime_thenTimerShouldCallback
+  :line: 68
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 4
+  :passed: 4
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.020920599999953993

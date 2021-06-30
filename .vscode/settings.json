@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "mock_one_shot_timer.h": "c",
+        "timer_driver.h": "c"
+    }
+}
