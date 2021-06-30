@@ -4,7 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/home/mbraniff/.gem/ruby/2.7.0/gems/ceedling-0.31.1/vendor/unity/src/"
+                "/home/mbraniff/.gem/ruby/2.7.0/gems/ceedling-0.31.1/vendor/unity/src/",
+                "${workspaceFolder}/build/test",
+                "/home/mbraniff/.gem/ruby/2.7.0/gems/ceedling-0.31.1/plugins/fake_function_framework/vendor/fff",
+                "/home/mbraniff/.gem/ruby/2.7.0/gems/ceedling-0.31.1/plugins/fake_function_framework/src"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

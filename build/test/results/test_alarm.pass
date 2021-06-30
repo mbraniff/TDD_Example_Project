@@ -1,0 +1,26 @@
+---
+:source:
+  :path: test
+  :file: test_alarm.c
+:successes:
+- :test: test_alarmShouldInitWithCorrectTimerAndLedPointer
+  :line: 42
+  :message: ''
+  :unity_test_time: 0
+- :test: test_whenTimePassesButNotPastStopTime_thenLedShouldRemainOffAndTimerShouldReadCorrectTime
+  :line: 49
+  :message: ''
+  :unity_test_time: 0
+- :test: test_whenTimePassesStopTime_thenLedShouldTurnOn
+  :line: 59
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 3
+  :passed: 3
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.005969599998934427

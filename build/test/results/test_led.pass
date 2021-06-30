@@ -1,0 +1,26 @@
+---
+:source:
+  :path: test
+  :file: test_led.c
+:successes:
+- :test: test_ledShouldInitializeToOff
+  :line: 18
+  :message: ''
+  :unity_test_time: 0
+- :test: test_ledCanBeTurnedOnWithWriteFunction
+  :line: 25
+  :message: ''
+  :unity_test_time: 0
+- :test: test_ledCanBeTurnedOffWithWriteFunction
+  :line: 33
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 3
+  :passed: 3
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.006620799998927396

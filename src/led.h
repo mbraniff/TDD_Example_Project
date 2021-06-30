@@ -10,6 +10,7 @@ typedef struct led_t{
     bool state;
 }led_t;
 
+void led_init(led_t* led);
 void led_write(led_t* led, bool state);
 bool led_read(led_t* led);
 

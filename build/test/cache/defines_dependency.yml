@@ -1,0 +1,7 @@
+---
+src/led.c:
+- TEST
+build/test/mocks/mock_one_shot_timer.c:
+- TEST
+src/alarm.c:
+- TEST
