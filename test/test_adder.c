@@ -10,7 +10,16 @@ void tearDown(void)
 {
 }
 
-void test_adder_NeedToImplement(void)
+void test_addTwoNumbersExpectingReturnAndTwoArguments()
 {
-    TEST_IGNORE_MESSAGE("Need to Implement adder");
+    add_ExpectAndReturn(1,1,2);
+    int ret = add(1,1);
+    TEST_ASSERT(ret == 2);
+}
+
+void test_addTwoNumbersExpectingReturnButIgnoringArguments()
+{
+    add_IgnoreAndReturn(2);
+    int ret = add(5,6);
+    TEST_ASSERT(ret == 2);
 }
