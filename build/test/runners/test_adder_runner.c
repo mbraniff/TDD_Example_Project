@@ -14,6 +14,7 @@ extern void setUp(void);
 extern void tearDown(void);
 extern void test_addTwoNumbersExpectingReturnAndTwoArguments();
 extern void test_addTwoNumbersExpectingReturnButIgnoringArguments();
+extern void test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters();
 
 
 /*=======Mock Management=====*/
@@ -81,9 +82,14 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_adder.c");
-  run_test(test_addTwoNumbersExpectingReturnAndTwoArguments, "test_addTwoNumbersExpectingReturnAndTwoArguments", 13);
-  run_test(test_addTwoNumbersExpectingReturnButIgnoringArguments, "test_addTwoNumbersExpectingReturnButIgnoringArguments", 20);
+  run_test(test_addTwoNumbersExpectingReturnAndTwoArguments, "test_addTwoNumbersExpectingReturnAndTwoArguments", 15);
+  run_test(test_addTwoNumbersExpectingReturnButIgnoringArguments, "test_addTwoNumbersExpectingReturnButIgnoringArguments", 23);
+  run_test(test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters, "test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters", 30);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();
 }
+
+//=======Defintions of FFF variables=====
+#include "fff.h"
+DEFINE_FFF_GLOBALS
