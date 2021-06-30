@@ -13,8 +13,6 @@ typedef struct one_shot_timer_t{
 }one_shot_timer_t;
 
 void one_shot_timer_init(one_shot_timer_t* timer, uint8_t stop, callback_t callback, void* context);
-void one_shot_timer_set_callback(one_shot_timer_t* timer, callback_t callback);
-void one_shot_timer_set_context(one_shot_timer_t* timer, void* context);
-void one_shot_timer_time_did_change(one_shot_timer_t* timer)
+void one_shot_timer_time_did_change(one_shot_timer_t* timer);
 
 #endif // ONE_SHOT_TIMER_H
