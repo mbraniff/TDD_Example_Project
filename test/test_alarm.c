@@ -49,9 +49,12 @@ void test_alarmShouldInitWithCorrectTimerAndLedPointer(void)
 
 void test_whenTimePassesButNotPastStopTime_thenLedShouldRemainOffAndTimerShouldReadCorrectTime(void)
 {
+    // Given
     init();
 
+    // Then
     one_shot_timer_time_did_change_Expect(&timer);
+    // When
     time_pass(&timer, 1);
 
     TEST_ASSERT(led_read(&led) == OFF);
@@ -60,10 +63,13 @@ void test_whenTimePassesButNotPastStopTime_thenLedShouldRemainOffAndTimerShouldR
 
 void test_whenTimePassesStopTime_thenLedShouldTurnOn(void)
 {
+    // Given
     init();
 
+    // Then
     one_shot_timer_time_did_change_Expect(&timer);
     one_shot_timer_time_did_change_Stub(time_did_change_redirect);
+    // When
     time_pass(&timer, 2);
 
     TEST_ASSERT(led_read(&led) == ON);

@@ -46,21 +46,29 @@ void test_timer_is_initiated(void)
 
 void test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled(void)
 {
+    // Given
     one_shot_timer_init_Expect(&timer, stop_time, 0, 0);
     timer_init(&timer, stop_time, 0, 0);
 
+    // Then
     one_shot_timer_time_did_change_Expect(&timer);
+
+    // when
     time_pass(&timer, 2);
     TEST_ASSERT(timer.current_time == 2);
 }
 
 void test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled(void)
 {
+    // Given
     one_shot_timer_init_Expect(&timer, stop_time, callback, 0);
     timer_init(&timer, stop_time, callback, 0);
 
+    // Then 
     one_shot_timer_time_did_change_Expect(&timer);
     one_shot_timer_time_did_change_Stub(time_did_change_redirect);
+    
+    // When
     time_pass(&timer, 1);
     TEST_ASSERT(callback_count == 0);
 }
