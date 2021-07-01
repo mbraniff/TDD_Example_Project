@@ -14,6 +14,7 @@ extern void setUp(void);
 extern void tearDown(void);
 extern void test_addTwoNumbersExpectingReturnAndTwoArguments();
 extern void test_addTwoNumbersExpectingReturnButIgnoringArguments();
+extern void test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters();
 
 
 /*=======Mock Management=====*/
@@ -83,6 +84,7 @@ int main(void)
   UnityBegin("test_adder.c");
   run_test(test_addTwoNumbersExpectingReturnAndTwoArguments, "test_addTwoNumbersExpectingReturnAndTwoArguments", 13);
   run_test(test_addTwoNumbersExpectingReturnButIgnoringArguments, "test_addTwoNumbersExpectingReturnButIgnoringArguments", 20);
+  run_test(test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters, "test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters", 27);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();

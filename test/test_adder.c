@@ -23,3 +23,13 @@ void test_addTwoNumbersExpectingReturnButIgnoringArguments()
     int ret = add(5,6);
     TEST_ASSERT(ret == 2);
 }
+
+void test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters()
+{
+    int returnVals[3] = {2,4,6};
+    for(int i=0;i<3;i++)
+    {
+        add_IgnoreAndReturn(returnVals[i]);
+        TEST_ASSERT_EQUAL(returnVals[i], add(1,1));
+    }
+}
