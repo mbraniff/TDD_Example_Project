@@ -2,6 +2,12 @@
 
 #include "mock_adder.h"
 
+int redirect(int arg0, int arg1, int calls)
+{
+    printf("Called\n");
+    return 0;
+}
+
 void setUp(void)
 {
 }
@@ -32,4 +38,18 @@ void test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters()
         add_IgnoreAndReturn(returnVals[i]);
         TEST_ASSERT_EQUAL(returnVals[i], add(1,1));
     }
+}
+
+void test_CallbackCalledCorrectly(void)
+{
+    add_AddCallback(redirect);
+    add_ExpectAndReturn(1, 1, 2);
+    add(1,1);
+}
+
+void test_StubCalledRegardless(void)
+{
+    add_Stub(redirect);
+    add_ExpectAndReturn(1,1,2);
+    add(1,2);
 }

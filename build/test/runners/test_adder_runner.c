@@ -15,6 +15,8 @@ extern void tearDown(void);
 extern void test_addTwoNumbersExpectingReturnAndTwoArguments();
 extern void test_addTwoNumbersExpectingReturnButIgnoringArguments();
 extern void test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters();
+extern void test_CallbackCalledCorrectly(void);
+extern void test_StubCalledRegardless(void);
 
 
 /*=======Mock Management=====*/
@@ -82,9 +84,11 @@ static void run_test(UnityTestFunction func, const char* name, UNITY_LINE_TYPE l
 int main(void)
 {
   UnityBegin("test_adder.c");
-  run_test(test_addTwoNumbersExpectingReturnAndTwoArguments, "test_addTwoNumbersExpectingReturnAndTwoArguments", 13);
-  run_test(test_addTwoNumbersExpectingReturnButIgnoringArguments, "test_addTwoNumbersExpectingReturnButIgnoringArguments", 20);
-  run_test(test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters, "test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters", 27);
+  run_test(test_addTwoNumbersExpectingReturnAndTwoArguments, "test_addTwoNumbersExpectingReturnAndTwoArguments", 19);
+  run_test(test_addTwoNumbersExpectingReturnButIgnoringArguments, "test_addTwoNumbersExpectingReturnButIgnoringArguments", 26);
+  run_test(test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters, "test_addingMultingNumbersExpectingDifferentReturnsIgnoringParameters", 33);
+  run_test(test_CallbackCalledCorrectly, "test_CallbackCalledCorrectly", 43);
+  run_test(test_StubCalledRegardless, "test_StubCalledRegardless", 50);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();
