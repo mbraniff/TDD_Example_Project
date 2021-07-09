@@ -84,7 +84,7 @@ int main(void)
   UnityBegin("test_alarm.c");
   run_test(test_alarmShouldInitWithCorrectTimerAndLedPointer, "test_alarmShouldInitWithCorrectTimerAndLedPointer", 43);
   run_test(test_whenTimePassesButNotPastStopTime_thenLedShouldRemainOffAndTimerShouldReadCorrectTime, "test_whenTimePassesButNotPastStopTime_thenLedShouldRemainOffAndTimerShouldReadCorrectTime", 50);
-  run_test(test_whenTimePassesStopTime_thenLedShouldTurnOn, "test_whenTimePassesStopTime_thenLedShouldTurnOn", 61);
+  run_test(test_whenTimePassesStopTime_thenLedShouldTurnOn, "test_whenTimePassesStopTime_thenLedShouldTurnOn", 64);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();

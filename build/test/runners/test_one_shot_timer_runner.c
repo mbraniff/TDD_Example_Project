@@ -85,8 +85,8 @@ int main(void)
   UnityBegin("test_one_shot_timer.c");
   run_test(test_timer_is_initiated, "test_timer_is_initiated", 41);
   run_test(test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled, "test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled", 47);
-  run_test(test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled, "test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled", 57);
-  run_test(test_whenTimePassesStopTime_thenTimerShouldCallback, "test_whenTimePassesStopTime_thenTimerShouldCallback", 68);
+  run_test(test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled, "test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled", 61);
+  run_test(test_whenTimePassesStopTime_thenTimerShouldCallback, "test_whenTimePassesStopTime_thenTimerShouldCallback", 76);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();

@@ -95,11 +95,17 @@ void test_whenTimePassesButNotPastStopTime_thenLedShouldRemainOffAndTimerShouldR
 
 {
 
+
+
     init();
 
 
 
-    one_shot_timer_time_did_change_CMockExpect(54, &timer);
+
+
+    one_shot_timer_time_did_change_CMockExpect(56, &timer);
+
+
 
     time_pass(&timer, 1);
 
@@ -109,9 +115,9 @@ void test_whenTimePassesButNotPastStopTime_thenLedShouldRemainOffAndTimerShouldR
 
    0
 
-   )) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(57)));}} while(0);
+   )) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(60)));}} while(0);
 
-    do {if ((timer.current_time == 1)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(58)));}} while(0);
+    do {if ((timer.current_time == 1)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(61)));}} while(0);
 
 }
 
@@ -121,13 +127,19 @@ void test_whenTimePassesStopTime_thenLedShouldTurnOn(void)
 
 {
 
+
+
     init();
 
 
 
-    one_shot_timer_time_did_change_CMockExpect(65, &timer);
+
+
+
 
     one_shot_timer_time_did_change_Stub(time_did_change_redirect);
+
+
 
     time_pass(&timer, 2);
 
@@ -137,6 +149,6 @@ void test_whenTimePassesStopTime_thenLedShouldTurnOn(void)
 
    1
 
-   )) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(69)));}} while(0);
+   )) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(75)));}} while(0);
 
 }

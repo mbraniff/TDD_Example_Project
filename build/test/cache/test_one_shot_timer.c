@@ -91,17 +91,25 @@ void test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled(void)
 
 {
 
-    one_shot_timer_init_CMockExpect(49, &timer, stop_time, 0, 0);
+
+
+    one_shot_timer_init_CMockExpect(50, &timer, stop_time, 0, 0);
 
     timer_init(&timer, stop_time, 0, 0);
 
 
 
-    one_shot_timer_time_did_change_CMockExpect(52, &timer);
+
+
+    one_shot_timer_time_did_change_CMockExpect(54, &timer);
+
+
+
+
 
     time_pass(&timer, 2);
 
-    do {if ((timer.current_time == 2)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(54)));}} while(0);
+    do {if ((timer.current_time == 2)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(58)));}} while(0);
 
 }
 
@@ -111,19 +119,27 @@ void test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled(v
 
 {
 
-    one_shot_timer_init_CMockExpect(59, &timer, stop_time, callback, 0);
+
+
+    one_shot_timer_init_CMockExpect(64, &timer, stop_time, callback, 0);
 
     timer_init(&timer, stop_time, callback, 0);
 
 
 
-    one_shot_timer_time_did_change_CMockExpect(62, &timer);
+
+
+    one_shot_timer_time_did_change_CMockExpect(68, &timer);
 
     one_shot_timer_time_did_change_Stub(time_did_change_redirect);
 
+
+
+
+
     time_pass(&timer, 1);
 
-    do {if ((callback_count == 0)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(65)));}} while(0);
+    do {if ((callback_count == 0)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(73)));}} while(0);
 
 }
 
@@ -133,18 +149,18 @@ void test_whenTimePassesStopTime_thenTimerShouldCallback(void)
 
 {
 
-    one_shot_timer_init_CMockExpect(70, &timer, stop_time, callback, 0);
+    one_shot_timer_init_CMockExpect(78, &timer, stop_time, callback, 0);
 
     timer_init(&timer, stop_time, callback, 0);
 
 
 
-    one_shot_timer_time_did_change_CMockExpect(73, &timer);
+    one_shot_timer_time_did_change_CMockExpect(81, &timer);
 
     one_shot_timer_time_did_change_Stub(time_did_change_redirect);
 
     time_pass(&timer, 2);
 
-    do {if ((callback_count == 1)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(76)));}} while(0);
+    do {if ((callback_count == 1)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(84)));}} while(0);
 
 }

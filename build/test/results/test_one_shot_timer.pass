@@ -12,11 +12,11 @@
   :message: ''
   :unity_test_time: 0
 - :test: test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled
-  :line: 57
+  :line: 61
   :message: ''
   :unity_test_time: 0
 - :test: test_whenTimePassesStopTime_thenTimerShouldCallback
-  :line: 68
+  :line: 76
   :message: ''
   :unity_test_time: 0
 :failures: []
@@ -27,4 +27,4 @@
   :failed: 0
   :ignored: 0
 :stdout: []
-:time: 0.020920599999953993
+:time: 0.022004400001605973
