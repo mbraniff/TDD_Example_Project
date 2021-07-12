@@ -164,3 +164,17 @@ void test_whenTimePassesStopTime_thenTimerShouldCallback(void)
     do {if ((callback_count == 1)) {} else {UnityFail( ((" Expression Evaluated To FALSE")), (UNITY_UINT)((UNITY_UINT)(84)));}} while(0);
 
 }
+
+
+
+void test_thisTestFails(void)
+
+{
+
+    UnityAssertEqualNumber((UNITY_INT)((0)), (UNITY_INT)((1)), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(89), UNITY_DISPLAY_STYLE_INT);
+
+}

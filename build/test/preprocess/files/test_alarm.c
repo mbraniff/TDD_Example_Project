@@ -135,7 +135,7 @@ void test_whenTimePassesStopTime_thenLedShouldTurnOn(void)
 
 
 
-
+    one_shot_timer_time_did_change_CMockExpect(70, &timer);
 
     one_shot_timer_time_did_change_Stub(time_did_change_redirect);
 

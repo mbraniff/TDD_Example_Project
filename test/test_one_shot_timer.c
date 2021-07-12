@@ -83,3 +83,8 @@ void test_whenTimePassesStopTime_thenTimerShouldCallback(void)
     time_pass(&timer, 2);
     TEST_ASSERT(callback_count == 1);
 }
+
+void test_thisTestFails(void)
+{
+    TEST_ASSERT_EQUAL(0,1);
+}

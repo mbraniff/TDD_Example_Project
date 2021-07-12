@@ -16,6 +16,7 @@ extern void test_timer_is_initiated(void);
 extern void test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled(void);
 extern void test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled(void);
 extern void test_whenTimePassesStopTime_thenTimerShouldCallback(void);
+extern void test_thisTestFails(void);
 
 
 /*=======Mock Management=====*/
@@ -87,6 +88,7 @@ int main(void)
   run_test(test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled, "test_whenTimePasses_thenCurrentTimeIsUpdatedAndTimeDidChangeIsCalled", 47);
   run_test(test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled, "test_whenTimePassesAndIsNotAtOrPastStopTime_thenCallbackShouldNotBeCalled", 61);
   run_test(test_whenTimePassesStopTime_thenTimerShouldCallback, "test_whenTimePassesStopTime_thenTimerShouldCallback", 76);
+  run_test(test_thisTestFails, "test_thisTestFails", 87);
 
   CMock_Guts_MemFreeFinal();
   return UnityEnd();
